@@ -24,28 +24,27 @@ public class Cylinder {
 	}
 	public double getBaseDiameter() {
 		double baseDiameter = radius*2;
-		return baseDiameter;
+		return Math.round(baseDiameter);
 	}
 	public double getBaseArea() {
 		double baseArea= (Math.pow(radius, 2) * Math.PI);
-		return baseArea;
+		return Math.round(baseArea);
 	}
 	public double getBaseCircumfrence() {
 		double baseCircumfrence = (radius*2)*Math.PI;
-		return baseCircumfrence;
+		return Math.round(baseCircumfrence);
 	}
 	public double getSurfaceArea() {
 		double surfaceArea = (2*Math.PI*radius*height) + 2*(Math.pow(radius, 2)*Math.PI);
-		return surfaceArea;
+		return Math.round(surfaceArea);
 	}
 	public double getVolume() {
 		double volume = (Math.PI*Math.pow(radius, 2)*height) ;
-		return volume;
+		return Math.round(volume);
 	}
-
 
 	public String toString () { 
-		return("Radius: " + radius + "\n" + "Height: "+ height + "\n" + "Base Diameter: " + baseDiameter + "\n" + "Base Area: " + baseArea + "\n" + "Base Circumference: " + baseCircumfrence + "\n" + "Surface Area: " + surfaceArea + "\n" + "Volume: " + volume) ; 
+		String s = "Radius: " + getRadius() + "\n" + "Height: "+ getHeight() + "\n" + "Base Diameter: " + getBaseDiameter() + "\n" + "Base Area: " + getBaseArea() + "\n" + "Base Circumference: " + getBaseCircumfrence() + "\n" + "Surface Area: " + getSurfaceArea() + "\n" + "Volume: " + getVolume() ; 
+		return s;
 	}
-
 }
